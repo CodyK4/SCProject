@@ -1,0 +1,65 @@
+/*Scrollbar*/
+body::-webkit-scrollbar {
+    width: 0.5vw;
+}
+
+body::-webkit-scrollbar-track {
+    background: gray;
+}
+
+body::-webkit-scrollbar-thumb {
+    border: 1vw;
+    border-radius: 10vw;
+    background: white;
+}
+/*Scrollbar*/
+
+
+.html {
+    margin: none;
+    overflow-x:none;
+}
+
+body {
+    margin: 0; 
+    background-color: red;
+}
+
+.Section {
+    width: 100vw;
+    height: 90vh;
+    background-color: blue;
+}
+
+#carousel {
+    order: 2; 
+}
+
+#header {
+    width: 100vw;
+    height: 12.5vh;
+    background-color: black;
+    order: 1; 
+}
+
+#navbar {
+    width: 100vw;
+    height: 7vh;
+}
+
+#statement {
+    background-color: green; 
+
+}
+
+.empty_space {
+    background-color: white;
+    width: 100vw;
+    height: 10vh;
+}
+
+.footer {
+    width: 100vw;
+    height: 20vh;
+    background-color: orange;
+}
