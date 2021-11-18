@@ -65,5 +65,27 @@ function carouselMan() {
   return slidePos
 }
 
+ftright_plaque.onclick = function() {
+    ftright_plaque.style.cssText = "animation: flip 2s; transition: all 1s; box-shadow: inset 0vw 1.6vw red; background-color: gray; color: white;";
+    SectionFooter.style.cssText = "background-color: black; transition: all 1s; color: white;";
+    };
+
+window.onscroll = function() {
+    backgroundAnim()
+}
+
+function backgroundAnim() {
+        var body = document.getElementsByTagName("body")[0];
+
+        const [red, green, blue] = [19, 220, 235]
+
+        window.addEventListener('scroll', () => {
+        let y = 1 + (window.scrollY || window.pageYOffset) / 500
+        y = y < 1 ? 1 : y
+        let [r, g, b] = [red/y, green/y, blue/y].map(Math.round)
+        body.style.backgroundColor = `rgb(${r}, ${g}, ${b})`
+})
+}
+
 carouselAuto()
 carouselMan()

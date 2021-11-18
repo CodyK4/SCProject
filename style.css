@@ -1,5 +1,93 @@
 @import url('https://fonts.googleapis.com/css?family=Monda');
 
+@media only screen and (max-width: 600px) {
+
+    /*Start of Mobile Footer*/
+
+    #FooterBridge {
+        position: absolute; 
+        right: 1vw;
+        background-image: url(FooterBridge.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 19vw;
+        height: 20vh;
+        margin-bottom: 28vh;
+    }
+
+    #SectionFooter {
+        background-color: #ff9900;
+        border-top: 1vh;
+        height: 30vh;
+        width: 100vw;
+        transition: all 1s;
+    }
+
+    .Footer_Collection {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        background-color: transparent;
+        width: 13vw;
+        height: 8vh;
+        margin-bottom: 22vh;
+    }
+
+    #ftleft {
+        left: 3vw;
+    }
+
+    #ftmid {
+        left: 30vw;
+    }
+
+    #ftright_top {
+        left: 57vw;
+        height: 20vh;
+        width:25vw;
+    }
+
+    #ftleftlinks {
+        font-size: 5.2vw;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+
+    #ftmidlinks {
+        font-size: 5.2vw;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+
+    .footerlinks {
+        font-size: 2vw;
+        margin-bottom: -1h;
+    }
+
+    #ftright_plaque {
+        transform: skew(-20deg);
+        background-color: lightgray;
+        border-style: double;
+        border-width: 0.5vw;
+        border-color: #990000;
+        left: 55vw;
+        height: 4.66vh;
+        width: 25vw;
+        margin-bottom: 0vh;
+        font-size: 1.8vw;
+        transition: all 1s;
+        box-shadow: 0.6vw 0.6vh black; 
+    }
+
+    #ftright_plaque:hover {
+        border-color: gold;
+        transform: scale(1.05) skew(-7deg);
+        transition: all 1s;
+        box-shadow: 1vw 1.2vh black; 
+    }
+
+        /*End of Mobile Footer*/
+}
+
+
 
 /*Scrollbar*/
 body::-webkit-scrollbar {
@@ -15,6 +103,13 @@ body::-webkit-scrollbar-thumb {
     border-radius: 10vw;
     background: white;
 }
+
+.disable-select {
+    -webkit-user-select: none;  
+    -moz-user-select: none;    
+    -ms-user-select: none;      
+    user-select: none;
+  }
 /*Scrollbar*/
 
 
@@ -26,16 +121,18 @@ html {
 
 body {
     margin: 0; 
-    background: linear-gradient(-25deg, #c52121, #f0d74a, #23a6d5, #23d5ab);
+    /*background: linear-gradient(-25deg, #c52121, #f0d74a, #23a6d5, #23d5ab);*/
+    background-color: rgb(19, 220, 235);
     background-size: 100vw 100vh;
-    animation: gradient 15s ease infinite;
     background-size: cover;
+    transition: all 1s;
 }
 
 .Section {
     width: 100vw;
     height: 90vh;
-    background-color: transparent;
+    background-color: rgba(128, 128, 128, 0.6);
+    box-shadow:inset 5vh 7vw 20vh rgba(255, 255, 255, 0.2);
 }
 
 /*Carousel*/
@@ -43,8 +140,6 @@ body {
 #carousel {
     order: 2; 
     justify-content: center;
-    background-color: rgba(128, 128, 128, 0.6);
-    box-shadow:inset 5vh 7vw 20vh rgba(255, 255, 255, 0.2);
 }
 
 #carousel_container {
@@ -62,6 +157,7 @@ body {
     display: none; 
     width: 90vw;
     height: 70vh;
+    box-shadow: 0vw 0vw 5vw white;
 }
 
  #SlideA {
@@ -98,11 +194,21 @@ body {
     transform: skew(-5deg);
 }
 
+#carousel_nav_caption {
+    position: absolute;
+    background-color: rgba(25, 25, 25, 0.18);
+    width: 8vw;
+    height: 4vh;
+    font-size: 0.9vw;
+    left: 10vw;
+    animation: ColorShift 12s infinite;
+}
+
 #prev {
     color: white;
     position: absolute;
     bottom: -4vh;
-    left: -18%;
+    left: -20%;
 }
 
 #next {
@@ -164,22 +270,144 @@ ul:hover {
     transition: all .5s;
 }
 
-#statement {
-    background-color: green; 
+#statement_header {
+    position: absolute;
+    background-color: black;
+    width: 35vw;
+    height: 10vh;
+    margin-left: 4vw;
+    margin-top: 3vh;
+}
 
+#statement_content {
+    position: absolute;
+    background-color: white;
+    width: 55vw;
+    height: 65vh;
+    margin-left: 4vw;
+    margin-top: 20vh;
+}
+
+#statement_img {
+    position: absolute;
+    background-color: cyan;
+    width: 33.3vw;
+    height: 35vh;
+    margin-left: 65%;
+    margin-top: 20vh;
 }
 
 .empty_space {
     background-color: transparent;
-    width: 100vw;
+    width: 101vw;
     height: 10vh;
 }
 
-.footer {
-    width: 100vw;
-    height: 20vh;
-    background-color: orange;
+  /*Start of Footer*/
+
+  #FooterBridge {
+    position: absolute; 
+    right: 1vw;
+    margin-bottom: 28vh;
+    background-image: url(images/FooterBridge.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 7vw;
+    height: 30vh;
 }
+
+#SectionFooter {
+    background-color: #ff9900;
+    border-top: 1vh;
+    border-left: none; 
+    border-right: none; 
+    border-bottom: none;
+    border-style: double;
+    border-color: white;
+    height: 40vh;
+    width: 100vw;
+    transition: all 1s;
+}
+
+.Footer_Collection {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    width: 20vw;
+    height: 30vh;
+}
+
+#ftleft {
+    left: 3vw;
+}
+
+#ftmid {
+    left: 30vw;
+}
+
+#ftright_top {
+    margin-bottom: 10vh;
+    left: 57vw;
+    height: 20vh;
+}
+
+#ftleftlinks {
+    margin-top: 1vh;
+    font-size: 1.2vw;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#ftmidlinks {
+    margin-top: 1vh;
+    font-size: 1.2vw;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+#ftrightlinks {
+    margin-top: 1vh;
+    font-size: 1.1vw;
+    color: white;
+    text-shadow: 0.1vw -0.1vw black;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    transition: all .5s;
+}
+
+#ftrightlinks:hover {
+    text-shadow: 0.12vw -0.12vw 0.1vw black;
+    transition: all 1s;
+    color: cyan;
+}
+
+
+.footerlinks {
+    font-size: 0.6vw;
+    margin-bottom: -1h;
+}
+
+#ftright_plaque {
+    transform: skew(-20deg);
+    background-color: lightgray;
+    border-style: double;
+    border-width: 0.5vw;
+    border-color: #990000;
+    left: 57vw;
+    height: 7vh;
+    margin-bottom: -23vh;
+    font-size: 0.9vw;
+    transition: all 1s;
+    box-shadow: 0.6vw 0.6vh black; 
+}
+
+#ftright_plaque:hover {
+    border-color: gold;
+    transform: scale(1.05) skew(-7deg);
+    transition: all 1s;
+    box-shadow: 1vw 1.2vh black; 
+}
+    /*CKLAXON V3 FOOTER. CKLAXON.CO.UK*/
+    /*End of Footer*/
 
 /*Animations*/
 
@@ -204,7 +432,7 @@ ul:hover {
         }
     } 
 
-  @keyframes FadeOut {
+    @keyframes FadeOut {
     0% {
       opacity: 100%;
     }
@@ -227,4 +455,49 @@ ul:hover {
     100% { transform: scale(0)}
     }
 
+    @keyframes ColorShift {
+        0% {
+            color:rgba(0, 0, 0, 0.44)
+        }
+        25% {
+            color: rgba(214, 126, 255, 0.8);
+        }
+        50% {
+            color:rgba(243, 11, 11, 0.8);
+        }
+        75% {
+            color: rgba(214, 126, 255, 0.8);
+        }
+        100% {
+            color:rgba(0, 0, 0, 0.44);
+        }
+    }
 
+    @keyframes flip {
+        0% {
+        transform: skew(-20deg) perspective(120px) rotateX(0deg) rotateY(0deg);
+        -webkit-transform: skew(-20deg) perspective(120px) rotateX(0deg) rotateY(0deg);
+        } 100% {
+        transform: skew(-20deg) perspective(120px) rotateX(-360.0deg) rotateY(0deg);
+        -webkit-transform: skew(-20deg) perspective(120px) rotateX(-360.0deg) rotateY(0deg);
+        }
+    }
+
+    /*
+    @keyframes backgroundAnim {
+        0% {
+            background: linear-gradient(-25deg, #c52121, #f0d74a, #23a6d5, #23d5ab);
+        }
+        50% {
+            background: linear-gradient(25deg, #23a6d5, #23d5ab, #f0d74a, #c52121);
+        }
+        100% {
+            background: linear-gradient(-25deg, #c52121, #f0d74a, #23a6d5, #23d5ab);
+        }
+    }
+
+
+/*SCProject - Github Version
+CSCK.
+cklaxon.co.uk 2021
+*/
