@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
     <script src="https://kit.fontawesome.com/e61405880a.js" crossorigin="anonymous"></script>
+    <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
     <title>CKlaxon</title>
          
     <meta charset="UTF-8" />
@@ -15,25 +16,33 @@
 
   <Section class="main">
         <div id="header">
-        </div>
-
-        <div id="navbar">
+            <div id="logo">Cody K.</div>
+            <div id="links">
+                <ul class="header_link" id="Github"><i class="fab fa-github fa-6x"></i></ul>
+                <ul class="header_link" id="fcc"><i class="fab fa-free-code-camp fa-6x"></i></ul>
+                <ul class="header_link" id="codewars"><i class="iconify" data-icon="cib:codewars" data-width="98.4" data-height="84"></i></ul>
+                <ul class="header_link" id="cklaxon"><img src="images/cklaxonicon.svg"></img></ul>
+            </div>
         </div>
 
         <div class="Section" id="carousel">
             <div id="carousel_container">
                 <div class="Slide" id="SlideA">
+                    <div class="slidetext" id="slidea_text">Slide A</div>
                 </div>
                 <div class="Slide" id="SlideB">
+                    <div class="slidetext" id="slide_b_text">Slide B</div>
                 </div>
                 <div class="Slide" id="SlideC">
+                    <div class="slidetext" id="slide_c_text">Slide C</div>
                 </div>
                 <div class="Slide" id="SlideD">
+                    <div class="slidetext" id="slide_d_text">Slide D</div>
                 </div>
 
                 <div id="carousel_nav">
-                    <a class="slide_selector" id="prev" onclick="carouselManClick(-1)"><i class="fas fa-chevron-left fa-5x"></i></a>
-                    <a class="slide_selector" id="next" onclick="carouselManClick(1)"><i class="fas fa-chevron-right fa-5x"></i></a>
+                    <a class="slide_selector" id="prev" onclick="carouselManClick(-1)"><</a>
+                    <a class="slide_selector" id="next" onclick="carouselManClick(1)">></a>
                 </div>
             </div>
         </div>

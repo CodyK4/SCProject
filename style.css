@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Monda');
+
+
 /*Scrollbar*/
 body::-webkit-scrollbar {
     width: 0.5vw;
@@ -18,6 +21,7 @@ body::-webkit-scrollbar-thumb {
 html {
     margin: none;
     overflow-x: hidden;
+    font-family: "Monda";
 }
 
 body {
@@ -40,13 +44,15 @@ body {
     order: 2; 
     justify-content: center;
     background-color: rgba(128, 128, 128, 0.6);
+    box-shadow:inset 5vh 7vw 20vh rgba(255, 255, 255, 0.2);
 }
 
 #carousel_container {
+    z-index: 1; 
     position: absolute;
     justify-self: center;
-    bottom: 0.85vh;
-    left: 2.5vw;
+    bottom: 10.85vh;
+    left: 5%;
     width: 95vw;
     height: 70vh;
 
@@ -58,7 +64,7 @@ body {
     height: 70vh;
 }
 
-#SlideA {
+ #SlideA {
     display: block;
     background-color: white;
     background-size: contain;
@@ -76,16 +82,34 @@ body {
     background-color: purple;
   }
 
-#carousel_nav {
-    display: flex;
+.slidetext {
     position: absolute;
-    left: 41.5vw;
-    bottom: 0.96vh;
-    width: 8vw;
+    font-size: 10vw;
+    left: 5vw;
+    text-shadow: 0.6vw 0.55vw 0vw rgba(45, 15, 15, 0.4);
+}
+
+#carousel_nav {
+    background-color: black;
+    box-shadow:0vw 0.5vw 1vw rgba(0, 0, 0, 0.44);
     height: 6vh;
-    background-color: rgba(255, 15, 15, 0.4); 
+    width: 10vw;
+    font-size: 5vw;
     transform: skew(-5deg);
-    box-shadow: 0.25vw 0.15vw 0.75vh rgba(45, 15, 15, 0.4);
+}
+
+#prev {
+    color: white;
+    position: absolute;
+    bottom: -4vh;
+    left: -18%;
+}
+
+#next {
+    color: white; 
+    position: absolute;
+    bottom: -4vh;
+    right: 0;
 }
 
 .slide_selector {
@@ -104,16 +128,40 @@ body {
 
 #header {
     width: 100vw;
-    height: 12.5vh;
-    background-color: black;
+    height: 4.5vh;
+    background-color: gray;
+    box-shadow: 1vw 0.6vw 2vw gray;
     order: 1; 
+    display: flex;
+    flex-direction: row;
+    font-family: "Monda";
 }
 
-#navbar {
-    display: block;
-    width: 100vw;
-    height: 7vh;
-    position: sticky;
+#logo {
+    width: 20vw;
+    height: 8.5vh;
+    background-color: lightseagreen;
+    font-size: 10.7vh;
+}
+
+#links {
+    left: 20%;
+    position: absolute;
+    width: 70vw;
+    height: 4.5vh;
+    top: 0.5vh;
+}
+
+ul {
+    color: black;
+    cursor: pointer;
+    display: inline;
+    margin: 3vw;
+    transition: all .5s;
+}
+
+ul:hover {
+    transition: all .5s;
 }
 
 #statement {
