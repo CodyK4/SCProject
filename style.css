@@ -15,25 +15,92 @@ body::-webkit-scrollbar-thumb {
 /*Scrollbar*/
 
 
-.html {
+html {
     margin: none;
-    overflow-x:none;
+    overflow-x: hidden;
 }
 
 body {
     margin: 0; 
-    background-color: red;
+    background: linear-gradient(-25deg, #c52121, #f0d74a, #23a6d5, #23d5ab);
+    background-size: 100vw 100vh;
+    animation: gradient 15s ease infinite;
+    background-size: cover;
 }
 
 .Section {
     width: 100vw;
     height: 90vh;
-    background-color: blue;
+    background-color: transparent;
 }
+
+/*Carousel*/
 
 #carousel {
     order: 2; 
+    justify-content: center;
+    background-color: rgba(128, 128, 128, 0.6);
 }
+
+#carousel_container {
+    position: absolute;
+    justify-self: center;
+    bottom: 0.85vh;
+    left: 2.5vw;
+    width: 95vw;
+    height: 70vh;
+
+}
+
+.Slide {
+    display: none; 
+    width: 90vw;
+    height: 70vh;
+}
+
+#SlideA {
+    display: block;
+    background-color: white;
+    background-size: contain;
+  }
+  
+  #SlideB {
+    background-color: blue;
+  }
+
+  #SlideC {
+    background-color: green;
+  }
+
+  #SlideD {
+    background-color: purple;
+  }
+
+#carousel_nav {
+    display: flex;
+    position: absolute;
+    left: 41.5vw;
+    bottom: 0.96vh;
+    width: 8vw;
+    height: 6vh;
+    background-color: rgba(255, 15, 15, 0.4); 
+    transform: skew(-5deg);
+    box-shadow: 0.25vw 0.15vw 0.75vh rgba(45, 15, 15, 0.4);
+}
+
+.slide_selector {
+    margin-left: 17%;
+    cursor: pointer;
+    transition: all .2s;
+}
+
+.slide_selector:hover {
+    transform: scale(1.3);
+    transition: all .2s;
+}
+
+
+/*End Carousel*/
 
 #header {
     width: 100vw;
@@ -43,8 +110,10 @@ body {
 }
 
 #navbar {
+    display: block;
     width: 100vw;
     height: 7vh;
+    position: sticky;
 }
 
 #statement {
@@ -53,7 +122,7 @@ body {
 }
 
 .empty_space {
-    background-color: white;
+    background-color: transparent;
     width: 100vw;
     height: 10vh;
 }
@@ -63,3 +132,51 @@ body {
     height: 20vh;
     background-color: orange;
 }
+
+/*Animations*/
+
+    @keyframes gradient {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 170% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+
+    @keyframes FadeIn {
+        0% {
+        opacity: 0%;
+        }
+    100% {
+        opacity: 100%;
+        }
+    } 
+
+  @keyframes FadeOut {
+    0% {
+      opacity: 100%;
+    }
+   100% {
+      opacity: 0%;
+    }
+  } 
+
+  @keyframes CZoomIn {
+    0% {
+   transform: scale(0.85)
+ }
+ 100% { transform: scale(1)}
+ }
+
+    @keyframes CZoomOut {
+    0% {
+    transform: scale(0.85)
+    }
+    100% { transform: scale(0)}
+    }
+
+

@@ -4,12 +4,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <script src="https://kit.fontawesome.com/e61405880a.js" crossorigin="anonymous"></script>
     <title>CKlaxon</title>
          
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 </head>
 <body>
+  <element onscroll=""></element>
+
   <Section class="main">
         <div id="header">
         </div>
@@ -18,6 +21,21 @@
         </div>
 
         <div class="Section" id="carousel">
+            <div id="carousel_container">
+                <div class="Slide" id="SlideA">
+                </div>
+                <div class="Slide" id="SlideB">
+                </div>
+                <div class="Slide" id="SlideC">
+                </div>
+                <div class="Slide" id="SlideD">
+                </div>
+
+                <div id="carousel_nav">
+                    <a class="slide_selector" id="prev" onclick="carouselManClick(-1)"><i class="fas fa-chevron-left fa-5x"></i></a>
+                    <a class="slide_selector" id="next" onclick="carouselManClick(1)"><i class="fas fa-chevron-right fa-5x"></i></a>
+                </div>
+            </div>
         </div>
 
         <div class="empty_space" id="transparent1">
@@ -36,3 +54,5 @@
    </Section>
 </body>
 </html>
+
+<script type="text/JavaScript" lang="JavaScript" src="app.js"></script>
