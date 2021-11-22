@@ -149,27 +149,21 @@
         #carousel_nav {
             background-color: black;
             box-shadow:0vw 0.5vw 1vw rgba(0, 0, 0, 0.44);
-            height: 6vh;
+            height: 10vh;
             width: 20vw;
             font-size: 5vw;
             transform: skew(-5deg);
         }
 
         #carousel_nav_caption {
-            position: absolute;
-            background-color: rgba(255, 255, 255, 0.8);
-            width: 8vw;
-            height: 4vh;
-            font-size: 0.9vw;
-            left: 20vw;
-            animation: ColorShift 12s infinite;
+            display: none;
         }
 
         #prev {
             color: white;
             position: absolute;
             font-size: 15vw;
-            top: -4.5vh;
+            top: -2.5vh;
             left: -20%;
         }
 
@@ -177,7 +171,7 @@
             color: white; 
             position: absolute;
             font-size: 15vw;
-            top: -4.5vh;
+            top: -2.5vh;
             right: 0;
         }
 
@@ -229,15 +223,15 @@
     }
 
     #links {
-        right: 40vw;
+        right: 16vw;
+        top: -1vh;
         position: absolute;
-        width: 15vw;
         transform: scale(3);
     }
 
     .header_link {
-        font-size: 1vw;
-        width: 100%;
+        font-size: 1.25vw;
+        width: 2%;
         height: 6vh;
     }
 
@@ -245,7 +239,7 @@
         color: black;
         cursor: pointer;
         display: inline;
-        margin: 0vw;
+        margin: -2vw;
         transition: all .5s;
     }
     
@@ -393,6 +387,8 @@ body::-webkit-scrollbar-thumb {
         height: 10vh;
         margin-left: 4vw;
         margin-top: 3vh;
+        font-size: 3vw;
+        color: white;
     }
     
     #statement_content {
@@ -551,8 +547,11 @@ body::-webkit-scrollbar-thumb {
 
 html {
     margin: none;
-    overflow-x: hidden;
     font-family: "Monda";
+}
+
+html, body {
+    overflow-x: hidden;
 }
 
 body {
@@ -583,25 +582,25 @@ body {
 }
 
 #github {
-    background-image: url(/images/github.png);
+    background-image: url(images/github.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
 
 #fcc {
-    background-image: url(/images/fcc.png);
+    background-image: url(images/fcc.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
 
 #codewars {
-    background-image: url(/images/codewars.png);
+    background-image: url(images/codewars.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
 
 #cklaxon {
-    background-image: url(/images/cklaxon.png);
+    background-image: url(images/cklaxon.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -683,6 +682,18 @@ body {
         } 100% {
         transform: skew(-20deg) perspective(120px) rotateX(-360.0deg) rotateY(0deg);
         -webkit-transform: skew(-20deg) perspective(120px) rotateX(-360.0deg) rotateY(0deg);
+        }
+    }
+
+    @keyframes jump {
+        0% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.5)
+        }
+        100% {
+            transform: scale(1)
         }
     }
 

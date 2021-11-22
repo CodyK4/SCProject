@@ -35,12 +35,17 @@ function carouselManClick(onclick) {
 
 function carouselMan() {
     var slides = document.getElementsByClassName("Slide");
+    var btnRight = document.getElementById("next");
+    var btnLeft = document.getElementById("prev");
+    var btnAnimOn = "animation: jump 1s ease;";
+    var btnAnimOff = "animation: none;"
     let slideIn = "animation: FadeIn 2s ease; display: block; ";
     let slideOut = "animation: FadeOut 2s ease; display: none; ";
 
     window.addEventListener("keydown", keyPressCheck, false);
 
     function keyPressCheck(e) {
+      btnRight.style.cssText = btnAnimOff;
       if (e.keyCode == "39") {  //RIGHT
         slides[slidePos-1].style.cssText = slideOut;
         if (slidePos >= slides.length) {
@@ -48,9 +53,14 @@ function carouselMan() {
         }
         slidePos++; 
         slides[slidePos-1].style.cssText = slideIn;
+
+        for(times in slides) {
+          btnRight.style.cssText = btnAnimOn;
+        } 
       } 
 
       if (e.keyCode == "37") {  //LEFT
+            btnLeft.style.cssText = btnAnimOff;
             slides[slidePos-1].style.cssText = slideOut;
             if (slidePos == 1) {
               slides[slidePos-1].style.cssText = slideOut;
@@ -59,6 +69,7 @@ function carouselMan() {
           } else { 
               slidePos--;
               slides[slidePos-1].style.cssText = slideIn;
+              btnLeft.style.cssText = btnAnimOn;
         }
     }
   }
