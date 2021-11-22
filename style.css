@@ -1,11 +1,11 @@
-@media only screen and (max-width: 770px) {
+@media only screen and (max-width: 765px) {
 
     /*Start of Mobile Footer*/
 
     #FooterBridge {
         position: absolute; 
         right: 0vw;
-        background-image: url(/images/FooterBridge.png);
+        background-image: url(images/FooterBridge.png);
         background-size: cover;
         background-repeat: no-repeat;
         width: 19vw;
@@ -211,6 +211,7 @@
         height: 35vh;
         margin-left: 4vw;
         margin-top: 20vh;
+        box-shadow: 1vw 1vw 0vw black;
     }
 
     #statement_img {
@@ -223,10 +224,10 @@
     }
 
     #links {
-        right: 16vw;
         top: -1vh;
-        position: absolute;
+        position: inherit;
         transform: scale(3);
+        margin-top: 0.0vh;        
     }
 
     .header_link {
@@ -274,7 +275,7 @@ body::-webkit-scrollbar-thumb {
 /*Scrollbar*/
 
 /*FULL SCREEN SIZE*/
-@media only screen and (min-width: 770px) {
+@media only screen and (min-width: 765px) {
 
     /*Start of Footer*/
 
@@ -382,11 +383,13 @@ body::-webkit-scrollbar-thumb {
 
     #statement_header {
         position: absolute;
-        background-color: black;
-        width: 35vw;
+        width: 42vw;
         height: 10vh;
         margin-left: 4vw;
         margin-top: 3vh;
+    }
+
+    #statement_header_text {
         font-size: 3vw;
         color: white;
     }
@@ -398,15 +401,22 @@ body::-webkit-scrollbar-thumb {
         height: 65vh;
         margin-left: 4vw;
         margin-top: 20vh;
+        box-shadow: 1vw 1vw 0vw black;
+    }
+
+    #statement_content_text {
+        font-size: 1.95vw;
     }
     
     #statement_img {
         position: absolute;
-        background-color: cyan;
+        background-image: url(images/statement_image.png);
+        background-size: cover;
         width: 33.3vw;
         height: 35vh;
         margin-left: 65%;
         margin-top: 20vh;
+        box-shadow: 1vw 1vw 0vw white;
     }
         /*CKLAXON V3 FOOTER. CKLAXON.CO.UK*/
         /*End of Footer*/
@@ -579,6 +589,7 @@ body {
     height: 8.5vh;
     background-color: lightseagreen;
     font-size: 5vw;
+    margin-right: 40vw;
 }
 
 #github {
