@@ -45,18 +45,15 @@ function carouselMan() {
     window.addEventListener("keydown", keyPressCheck, false);
 
     function keyPressCheck(e) {
-      btnRight.style.cssText = btnAnimOff;
       if (e.keyCode == "39") {  //RIGHT
+        btnRight.style.cssText = btnAnimOff;
         slides[slidePos-1].style.cssText = slideOut;
         if (slidePos >= slides.length) {
           slidePos = 0
         }
         slidePos++; 
         slides[slidePos-1].style.cssText = slideIn;
-
-        for(times in slides) {
-          btnRight.style.cssText = btnAnimOn;
-        } 
+        btnAnim_right()
       } 
 
       if (e.keyCode == "37") {  //LEFT
@@ -69,11 +66,23 @@ function carouselMan() {
           } else { 
               slidePos--;
               slides[slidePos-1].style.cssText = slideIn;
-              btnLeft.style.cssText = btnAnimOn;
+              btnAnim_left()
         }
+
+        for(s in slides) {
+          btnAnim_left()
+        } // CHANGE THIS 
     }
   }
   return slidePos
+
+  function btnAnim_left() {
+    btnLeft.style.cssText = btnAnimOn;
+  }
+
+  function btnAnim_right() {
+    btnRight.style.cssText = btnAnimOn;
+  }
 }
 
 ftright_plaque.onclick = function() {
@@ -86,16 +95,23 @@ window.onscroll = function() {
 }
 
 function backgroundAnim() {
-        var body = document.getElementsByTagName("body")[0];
+  var body = document.getElementsByTagName("body")[0];
+  const [red, green, blue] = [19, 220, 235];
 
-        const [red, green, blue] = [19, 220, 235]
+  window.addEventListener("scroll", colourChange);
 
-        window.addEventListener('scroll', () => {
-        let y = 1 + (window.scrollY || window.pageYOffset) / 500
-        y = y < 1 ? 1 : y
-        let [r, g, b] = [red/y, green/y, blue/y].map(Math.round)
-        body.style.backgroundColor = `rgb(${r}, ${g}, ${b})`
-})
+  function colourChange() {
+    let pos = 1 + (window.scrollY || window.pageYOffset) / 500
+
+    if (pos < 1) {
+       pos = 1
+      } 
+       else {
+         pos = pos  }
+
+    let[r, g, b] = [red/pos, green/pos, blue/pos].map(Math.round)
+    body.style.backgroundColor = `rgb(${r}, ${g}, ${b})`
+    }
 }
 
 carouselAuto()

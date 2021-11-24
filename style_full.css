@@ -1,0 +1,280 @@
+/*FULL SCREEN SIZE*/
+@media only screen and (min-width: 765px) {
+
+    /*Start of Footer*/
+
+    #FooterBridge {
+        position: absolute; 
+        right: 1vw;
+        margin-bottom: 28vh;
+        background-image: url(images/FooterBridge.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 7vw;
+        height: 30vh;
+    }
+
+    #SectionFooter {
+        background-color: #4d4d4d;
+        border-top: 1vh;
+        border-left: none; 
+        border-right: none; 
+        border-bottom: none;
+        border-style: double;
+        border-color: white;
+        height: 40vh;
+        width: 100vw;
+        transition: all 1s;
+    }
+
+    .Footer_Collection {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        background-color: transparent;
+        width: 20vw;
+        height: 30vh;
+    }
+
+    #ftleft {
+        left: 3vw;
+    }
+
+    #ftmid {
+        left: 30vw;
+    }
+
+    #ftright_top {
+        margin-bottom: 10vh;
+        left: 57vw;
+        height: 20vh;
+    }
+
+    #ftleftlinks {
+        margin-top: 1vh;
+        font-size: 1.2vw;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+
+    #ftmidlinks {
+        margin-top: 1vh;
+        font-size: 1.2vw;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+
+
+    #ftrightlinks {
+        margin-top: 1vh;
+        font-size: 1.1vw;
+        color: white;
+        text-shadow: 0.1vw -0.1vw black;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        transition: all .5s;
+    }
+
+    #ftrightlinks:hover {
+        text-shadow: 0.12vw -0.12vw 0.1vw black;
+        transition: all 1s;
+        color: cyan;
+    }
+
+
+    .footerlinks {
+        font-size: 0.6vw;
+        margin-bottom: -1h;
+    }
+
+    #ftright_plaque {
+        transform: skew(-20deg);
+        background-color: lightgray;
+        border-style: double;
+        border-width: 0.5vw;
+        border-color: #990000;
+        left: 57vw;
+        height: 7vh;
+        margin-bottom: -23vh;
+        font-size: 0.9vw;
+        transition: all 1s;
+        box-shadow: 0.6vw 0.6vh black; 
+    }
+
+    #ftright_plaque:hover {
+        border-color: gold;
+        transform: scale(1.05) skew(-7deg);
+        transition: all 1s;
+        box-shadow: 1vw 1.2vh black; 
+    }
+
+    #statement_header {
+        position: absolute;
+        width: 42vw;
+        height: 10vh;
+        margin-left: 4vw;
+        margin-top: 3vh;
+    }
+
+    #statement_header_text {
+        font-size: 3vw;
+        color: white;
+    }
+    
+    #statement_content {
+        position: absolute;
+        background-color: white;
+        width: 55vw;
+        height: 65vh;
+        margin-left: 4vw;
+        margin-top: 20vh;
+        box-shadow: 1vw 1vw 0vw black;
+    }
+
+    #statement_content_text {
+        margin: 1.2vw;
+        font-size: 1.95vw;
+    }
+    
+    #statement_img {
+        position: absolute;
+        background-image: url(images/statement_image.png);
+        background-size: cover;
+        width: 33.3vw;
+        height: 35vh;
+        margin-left: 65%;
+        margin-top: 20vh;
+        box-shadow: 1vw 1vw 0vw white;
+    }
+        /*CKLAXON V3 FOOTER. CKLAXON.CO.UK*/
+        /*End of Footer*/
+
+    .Section {
+    width: 100vw;
+    height: 90vh;
+    background-color: rgba(128, 128, 128, 0.6);
+    box-shadow:inset 5vh 7vw 20vh rgba(255, 255, 255, 0.2);
+}
+
+    /*Carousel*/
+
+    #carousel {
+        order: 2; 
+        justify-content: center;
+    }
+
+    #carousel_container {
+        z-index: 1; 
+        position: absolute;
+        justify-self: center;
+        bottom: 10.85vh;
+        left: 5%;
+        width: 95vw;
+        height: 70vh;
+
+    }
+
+    .Slide {
+        display: none; 
+        width: 90vw;
+        height: 70vh;
+        box-shadow: 1vw 1vw 0vw black;
+    }
+
+    #SlideA {
+        display: block;
+        background-color: white;
+        background-size: contain;
+    }
+    
+    #SlideB {
+        background-color: blue;
+    }
+
+    #SlideC {
+        background-color: green;
+    }
+
+    #SlideD {
+        background-color: purple;
+    }
+
+    .slidetext {
+        position: absolute;
+        font-size: 10vw;
+        left: 5vw;
+        text-shadow: 0.6vw 0.55vw 0vw rgba(45, 15, 15, 0.4);
+    }
+
+    #carousel_nav {
+        background-color: black;
+        box-shadow:0vw 0.5vw 1vw rgba(0, 0, 0, 0.44);
+        height: 6vh;
+        width: 10vw;
+        font-size: 5vw;
+        transform: skew(-5deg);
+    }
+
+    #carousel_nav_caption {
+        position: absolute;
+        background-color: rgba(255, 255, 255, 0.8);
+        width: 8vw;
+        height: 4vh;
+        font-size: 0.9vw;
+        left: 10vw;
+        animation: ColorShift 12s infinite;
+    }
+
+    #prev {
+        color: white;
+        position: absolute;
+        bottom: -4vh;
+        left: -20%;
+    }
+
+    #next {
+        color: white; 
+        position: absolute;
+        bottom: -4vh;
+        right: 0;
+    }
+
+    .slide_selector {
+        margin-left: 17%;
+        cursor: pointer;
+        transition: all .2s;
+    }
+
+    .slide_selector:hover {
+        transform: scale(1.3);
+        transition: all .2s;
+    }
+
+
+/*End Carousel*/
+
+    #links {
+        left: 20%;
+        position: absolute;
+        width: 70vw;
+        height: 4.5vh;
+        top: 0.5vh;
+    }
+
+    .header_link {
+        font-size: 1vw;
+        width: 100%;
+        height: 6vh;
+    }
+
+    ul {
+        color: black;
+        cursor: pointer;
+        display: inline;
+        margin: 3vw;
+        transition: all .5s;
+    }
+    
+    ul:hover {
+        transition: all .5s;
+    }
+}
+
+/*END OF FULL SCREEN SIZES*/
