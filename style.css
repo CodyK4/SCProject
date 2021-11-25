@@ -75,19 +75,19 @@ body {
 }
 
 #github {
-    background-image: url(/images/github.png);
+    background-image: url(images/github.png);
 }
 
 #fcc {
-    background-image: url(/images/fcc.png);
+    background-image: url(images/fcc.png);
 }
 
 #codewars {
-    background-image: url(/images/codewars.png);
+    background-image: url(images/codewars.png);
 }
 
 #cklaxon {
-    background-image: url(/images/cklaxon.png);
+    background-image: url(images/cklaxon.png);
     
 }
 
@@ -97,20 +97,20 @@ body {
 }
 
 #SlideA {
-    background-image: url(/images/Portfolio.png);
+    background-image: url(images/Portfolio.png);
 }
 
 #SlideB {
-    background-image: url(/images/scproject.png);
+    background-image: url(images/scproject.png);
     box-shadow: 1vw 1vw 0vw grey;
 }
 
 #SlideC {
-    background-image: url(/images/CasinoProject.png);
+    background-image: url(images/CasinoProject.png);
 }
 
 #SlideD {
-    background-image: url(/images/gipfeln.png);
+    background-image: url(images/gipfeln.png);
 }
 
 
