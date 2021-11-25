@@ -26,6 +26,7 @@ body::-webkit-scrollbar-thumb {
 html {
     margin: none;
     font-family: "Monda";
+    user-select: none;
 }
 
 html, body {
@@ -74,19 +75,19 @@ body {
 }
 
 #github {
-    background-image: url(images/github.png);
+    background-image: url(/images/github.png);
 }
 
 #fcc {
-    background-image: url(images/fcc.png);
+    background-image: url(/images/fcc.png);
 }
 
 #codewars {
-    background-image: url(images/codewars.png);
+    background-image: url(/images/codewars.png);
 }
 
 #cklaxon {
-    background-image: url(images/cklaxon.png);
+    background-image: url(/images/cklaxon.png);
     
 }
 
