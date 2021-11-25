@@ -90,6 +90,28 @@ body {
     
 }
 
+#slide_b_text, #slide_c_text, #slide_d_text {
+    font-size: 6.44vw;
+    text-shadow: 0.4vw 0.33vw 0vw rgba(45, 15, 15, 0.4);
+}
+
+#SlideA {
+    background-image: url("/images/Portfolio.png");
+}
+
+#SlideB {
+    background-image: url("/images/scproject.png");
+    box-shadow: 1vw 1vw 0vw grey;
+}
+
+#SlideC {
+    background-image: url("/images/CasinoProject.png");
+}
+
+#SlideD {
+    background-image: url("/images/gipfeln.png");
+}
+
 
 /*Animations & Misc*/
 
@@ -177,8 +199,6 @@ body {
             transform: scale(1)
         }
     }
-
-    @import url('https://fonts.googleapis.com/css?family=Monda');
 
 /*SCProject - Github Version
 CSCK.

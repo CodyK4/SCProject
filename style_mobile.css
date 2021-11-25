@@ -119,24 +119,9 @@
             width: 90vw;
             height: 40vh;
             box-shadow: 1vw 1vw 0vw black;
-        }
-
-        #SlideA {
-            display: block;
-            background-color: white;
-            background-size: contain;
-        }
-        
-        #SlideB {
-            background-color: blue;
-        }
-
-        #SlideC {
-            background-color: green;
-        }
-
-        #SlideD {
-            background-color: purple;
+            background-size: cover;
+            background-position: center;
+            background-repeat:no-repeat;
         }
 
         .slidetext {
@@ -229,7 +214,6 @@
     }
 
     #links {
-        top: -1vh;
         position: inherit;
         transform: scale(3);
         margin-top: 0.0vh;        

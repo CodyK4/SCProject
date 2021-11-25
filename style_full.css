@@ -176,24 +176,15 @@
         width: 90vw;
         height: 70vh;
         box-shadow: 1vw 1vw 0vw black;
+        transition: all 1s ease;
+        background-size: cover;
+        background-repeat: no-repeat;
     }
 
-    #SlideA {
-        display: block;
-        background-color: white;
-        background-size: contain;
-    }
-    
-    #SlideB {
-        background-color: blue;
-    }
-
-    #SlideC {
-        background-color: green;
-    }
-
-    #SlideD {
-        background-color: purple;
+    .Slide:hover {
+        transform: scale(1.01);
+        transition: all .5s ease;
+        cursor: pointer;
     }
 
     .slidetext {
@@ -201,6 +192,7 @@
         font-size: 10vw;
         left: 5vw;
         text-shadow: 0.6vw 0.55vw 0vw rgba(45, 15, 15, 0.4);
+        color: black;
     }
 
     #carousel_nav {
