@@ -1,7 +1,8 @@
-var slidePos = 0;
-
 console.log("JS Loaded successfully.")
 
+var slidePos = 0;
+
+//carouselAuto- Allows the carousel to automatically loop without user input
 function carouselAuto() { 
     var slides = document.getElementsByClassName("Slide");
     
@@ -17,7 +18,7 @@ function carouselAuto() {
     return slidePos
 }
 
-
+//carouselManClick - Allows the user to navigate the carousel with clickable buttons.
 function carouselManClick(onclick) {
     var slides = document.getElementsByClassName("Slide");
 
@@ -33,6 +34,7 @@ function carouselManClick(onclick) {
     return slidePos
 }
 
+//carouselMan - Allows the user to navigate the carousel with keyboard inputs.
 function carouselMan() {
     var slides = document.getElementsByClassName("Slide");
     var btnRight = document.getElementById("next");
@@ -71,11 +73,12 @@ function carouselMan() {
 
         for(s in slides) {
           btnAnim_left()
-        } // CHANGE THIS 
+        } 
     }
   }
   return slidePos
 
+  //btnAnim_left & btnAnim_right - Animate the button on keyboard input.
   function btnAnim_left() {
     btnLeft.style.cssText = btnAnimOn;
   }
@@ -94,6 +97,7 @@ window.onscroll = function() {
     backgroundAnim()
 }
 
+//backgroundAnim- dim the background colour as the user scrolls down the page.
 function backgroundAnim() {
   var body = document.getElementsByTagName("body")[0];
   const [red, green, blue] = [19, 220, 235];
@@ -104,13 +108,12 @@ function backgroundAnim() {
     let pos = 1 + (window.scrollY || window.pageYOffset) / 500
 
     if (pos < 1) {
-       pos = 1
-      } 
-       else {
-         pos = pos  }
+       pos = 1 
+      } else {
+        pos = pos  }
 
     let[r, g, b] = [red/pos, green/pos, blue/pos].map(Math.round)
-    body.style.backgroundColor = `rgb(${r}, ${g}, ${b})`
+    body.style.backgroundColor = `rgb(${r}, ${g}, ${b})` 
     }
 }
 
