@@ -182,9 +182,8 @@
 
     #statement_header {
     position: absolute;
-    background-color: black;
-    width: 55vw;
-    height: 10vh;
+    width: 75vw;
+    height: 20vh;
     margin-left: 4vw;
     margin-top: 3vh;
 }
@@ -201,7 +200,8 @@
 
     #statement_img {
         position: absolute;
-        background-color: cyan;
+        background-image: url(images/statement_image.png);
+        background-size: cover;
         width: 33.3vw;
         height: 10vh;
         margin-left: 65%;
